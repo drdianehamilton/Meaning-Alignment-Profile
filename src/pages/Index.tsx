@@ -1,8 +1,8 @@
 import React from 'react';
 import AppLayout from '../components/AppLayout';
-import { AppProvider } from '../contexts/AppContext';
+import { AppProvider } from '../Contexts/App.Context';
 
-const Index: React.FC = () => {
+const Index = () => {
   return (
     <AppProvider>
       <AppLayout />
