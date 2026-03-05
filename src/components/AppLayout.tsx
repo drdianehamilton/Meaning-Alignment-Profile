@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppContext } from '@/contexts/AppContext';
+import { useAppContext } from '../contexts/App.Context';
 import WelcomeScreen from './WelcomeScreen';
 import AssessmentScreen from './AssessmentScreen';
 import ResultsScreen from './ResultsScreen';
