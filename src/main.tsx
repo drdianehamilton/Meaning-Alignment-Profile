@@ -1,6 +1,6 @@
 
 import { createRoot } from 'react-dom/client'
-import App from './app.tsx'
+import App from './app'
 import './index.css'
 
 // Remove dark mode class addition
