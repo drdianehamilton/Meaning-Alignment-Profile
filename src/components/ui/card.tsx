@@ -1,7 +1,11 @@
 import React from "react";
 
 export function Card({ children }: any) {
-  return <div style={{ border: "1px solid #ddd", padding: "20px", borderRadius: "10px" }}>{children}</div>;
+  return (
+    <div style={{ border: "1px solid #ddd", padding: "20px", borderRadius: "10px" }}>
+      {children}
+    </div>
+  );
 }
 
 export function CardHeader({ children }: any) {
@@ -15,6 +19,7 @@ export function CardTitle({ children }: any) {
 export function CardContent({ children }: any) {
   return <div>{children}</div>;
 }
+
 export function CardDescription({ children }: any) {
   return (
     <p
