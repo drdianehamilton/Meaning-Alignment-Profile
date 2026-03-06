@@ -15,27 +15,27 @@ const WelcomeScreen: React.FC = () => {
       <Card className="w-full max-w-4xl shadow-2xl border-0 bg-white/95 backdrop-blur-sm">
         <CardHeader className="text-center pb-8 px-8 pt-12">
           <CardTitle className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
-            Curiosity Code Index®
-            <br />
-            Companion
+            Meaning Alignment Profile
           </CardTitle>
+
           <CardDescription className="text-xl text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
-            Quickly identify what might be holding your curiosity back. This short assessment reveals how four key factors — known as FATE — influence how you think, learn, and lead.
+            Discover how well your work, strengths, and motivations align with the life you want to build.
+            This short assessment highlights areas where greater meaning, engagement, and purpose may exist.
           </CardDescription>
 
-          {/* FATE Icons Grid */}
+          {/* Alignment Dimensions */}
           <div className="grid grid-cols-4 gap-4 sm:gap-6 mb-12 max-w-2xl mx-auto">
             {[
-              { color: 'from-blue-400 to-blue-600', emoji: '😟', letter: 'F' },
-              { color: 'from-purple-400 to-purple-600', emoji: '💭', letter: 'A' },
-              { color: 'from-green-400 to-green-600', emoji: '⚙️', letter: 'T' },
-              { color: 'from-orange-400 to-orange-600', emoji: '👥', letter: 'E' },
-            ].map(({ color, emoji, letter }) => (
-              <div key={letter} className="flex flex-col items-center">
+              { color: 'from-blue-400 to-blue-600', emoji: '🎯', label: 'Purpose' },
+              { color: 'from-purple-400 to-purple-600', emoji: '💪', label: 'Strengths' },
+              { color: 'from-green-400 to-green-600', emoji: '🧭', label: 'Autonomy' },
+              { color: 'from-orange-400 to-orange-600', emoji: '🌱', label: 'Growth' },
+            ].map(({ color, emoji, label }) => (
+              <div key={label} className="flex flex-col items-center">
                 <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${color} rounded-2xl flex items-center justify-center mb-2 shadow-lg`}>
                   <span className="text-white text-2xl sm:text-3xl">{emoji}</span>
                 </div>
-                <span className="text-xl sm:text-2xl font-bold text-gray-800">{letter}</span>
+                <span className="text-sm sm:text-base font-semibold text-gray-800">{label}</span>
               </div>
             ))}
           </div>
@@ -47,7 +47,7 @@ const WelcomeScreen: React.FC = () => {
             </div>
             <div className="flex items-center text-gray-600 bg-gray-50 px-4 py-2 rounded-full text-sm sm:text-base">
               <Brain className="w-6 h-6 sm:w-8 sm:h-8 mr-2 text-purple-500" />
-              <span className="font-medium">Instantly shows how each factor impacts your curiosity</span>
+              <span className="font-medium">Reveals how aligned your work and meaning are</span>
             </div>
           </div>
         </CardHeader>
@@ -59,8 +59,9 @@ const WelcomeScreen: React.FC = () => {
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
-              Take the Assessment
+              Start the Assessment
             </Button>
+
             {hasCompletedAssessment && (
               <Button 
                 onClick={handleViewResults}
