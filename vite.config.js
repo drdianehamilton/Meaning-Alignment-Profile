@@ -1,20 +1,15 @@
-{
-  "name": "vite_react_shadcn_ts",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+
+export default defineConfig({
+  server: {
+    host: "0.0.0.0",
+    port: 8080
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "vite": "^5.0.0",
-    "typescript": "^5.2.0"
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": "/src"
+    }
   }
-}
+});
