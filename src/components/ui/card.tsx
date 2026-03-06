@@ -15,3 +15,16 @@ export function CardTitle({ children }: any) {
 export function CardContent({ children }: any) {
   return <div>{children}</div>;
 }
+export function CardDescription({ children }: any) {
+  return (
+    <p
+      style={{
+        fontSize: "14px",
+        color: "#6b7280",
+        marginTop: "4px"
+      }}
+    >
+      {children}
+    </p>
+  );
+}
